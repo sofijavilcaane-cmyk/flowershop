@@ -1,0 +1,16 @@
+Šajā mapē ir gatavs projekts ar Git commit vēsturi.
+
+Ko iesniegt skolotājam:
+1. ZIP failu flowershop_project_github.zip.
+2. Ja vajag pierādīt commit vēsturi, atver mapi flowershop_project VS Code un terminālī ieraksti:
+   git log --oneline
+
+Kā augšupielādēt GitHub:
+1. Izveido jaunu repository GitHub.
+2. Atver VS Code termināli projekta mapē.
+3. Ieraksti:
+   git remote add origin TAVS_GITHUB_REPO_LINKS
+   git branch -M main
+   git push -u origin main
+
+Projektā ir vairāki jēgpilni commit ieraksti, nevis viens commit darba beigās.

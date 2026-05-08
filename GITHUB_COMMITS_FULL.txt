@@ -1,0 +1,7 @@
+e45dbd6 (HEAD -> main) Pievienots GitHub commit vēstures fails
+66fa594 Pievienota README informācija un kļūdu lapa
+124e2de Pievienota notikumu sadaļa ar piemērotajām puķēm
+46c3b44 Pievienoti puķu attēli un lapu noformējums
+9ae8494 Izveidotas puķu saraksta un apraksta lapas
+366aae2 Pievienotas datubāzes tabulas un sākuma dati
+be45bd5 Izveidota projekta pamatstruktūra
