@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Notikumi | Puķu veikals{% endblock %}
+
+{% block content %}
+<h2 class="section-title">Notikumi</h2>
+<p>Uzklikšķini uz notikuma, lai redzētu puķes, kas tam atbilst.</p>
+
+<div class="list-cards">
+    {% for occasion in occasions %}
+    <a class="list-card" href="{{ url_for('occasion_show', occasion_id=occasion.id) }}">
+        <h3>{{ occasion.name }}</h3>
+        <p>{{ occasion.description }}</p>
+        <p>Puķu skaits: {{ occasion.flower_count }}</p>
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}

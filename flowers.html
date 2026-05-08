@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Puķes | Puķu veikals{% endblock %}
+
+{% block content %}
+<h2 class="section-title">Populārākās puķes</h2>
+
+<div class="grid">
+    {% for flower in flowers %}
+    <article class="card">
+        <img src="{{ url_for('static', filename='images/' + flower.image) }}" alt="{{ flower.name }}">
+        <h3>{{ flower.name }}</h3>
+        <p><strong>Krāsa:</strong> {{ flower.color }}</p>
+        <p><strong>Kategorija:</strong> {{ flower.category_name }}</p>
+        <p><strong>Cena:</strong> {{ flower.price }} €</p>
+        <a class="button" href="{{ url_for('flower_show', flower_id=flower.id) }}">Skatīt vairāk</a>
+    </article>
+    {% endfor %}
+</div>
+{% endblock %}

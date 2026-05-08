@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}{{ occasion.name }} | Puķu veikals{% endblock %}
+
+{% block content %}
+<h2 class="section-title">{{ occasion.name }}</h2>
+<p>{{ occasion.description }}</p>
+<p>Šīs puķes ir piemērotas izvēlētajam notikumam.</p>
+
+{% if flowers %}
+<div class="grid">
+    {% for flower in flowers %}
+    <article class="card">
+        <img src="{{ url_for('static', filename='images/' + flower.image) }}" alt="{{ flower.name }}">
+        <h3>{{ flower.name }}</h3>
+        <p><strong>Krāsa:</strong> {{ flower.color }}</p>
+        <p><strong>Kategorija:</strong> {{ flower.category_name }}</p>
+        <p><strong>Cena:</strong> {{ flower.price }} €</p>
+        <a class="button" href="{{ url_for('flower_show', flower_id=flower.id) }}">Skatīt vairāk</a>
+    </article>
+    {% endfor %}
+</div>
+{% else %}
+<p>Šim notikumam vēl nav pievienota neviena puķe.</p>
+{% endif %}
+
+<a class="button" href="{{ url_for('occasions') }}">Atpakaļ uz notikumiem</a>
+{% endblock %}

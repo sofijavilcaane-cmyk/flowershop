@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Sākums | Puķu veikals{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h2>Atplauksti ar smaidu pavasarī</h2>
+</section>
+
+<h2 class="section-title">Par veikalu</h2>
+<p>
+    Šajā mājaslapā vari apskatīt dažādas puķes, to cenas, krāsas un piemērotos notikumus.
+    Notikumu sadaļā var uzklikšķināt uz notikuma un redzēt puķes, kas tam atbilst.
+</p>
+
+<a class="button" href="{{ url_for('flowers') }}">Skatīt puķes</a>
+{% endblock %}
